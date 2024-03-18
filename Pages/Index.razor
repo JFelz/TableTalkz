@@ -1,7 +1,39 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>@Title</h1>
 
 Welcome to your new app.
+<div>
+    <button class="btn btn-outline-primary" onclick="Question"> Generate Question </button>
+</div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+
+<SurveyPrompt Title="Sometimes we have to initiate in order for change to happen" />
+
+@code{
+    public string Title { get; set; } = "Welcome to Table Talkz!"; 
+
+    void Question()
+    {
+        // Questions class for formatted data -- use constructor to GET data
+
+        // Instantiate a new List array with the data type of Question
+
+        // Check if List state is empty
+
+        //API call is retrieved here
+
+        //Retrieve 5 random questions at one time from DB
+        
+        // Store 5 questions in List
+
+        // Iterate through those 5 questions
+
+        // Display one question at a time in view, until those questions are done.
+
+        // Once done, re-call 5 more in DB that are not equal to the previous 5.
+            // If array iteration is greater than 60%, call more questions.
+        
+        // If goes through the all the database questions, delete current state, and re-randomize from the start.
+    }
+}
